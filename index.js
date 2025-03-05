@@ -1,0 +1,27 @@
+// 1️⃣ Function that receives a function and calls it
+function receivesAFunction(callback) {
+    callback();
+  }
+  
+  // 2️⃣ Function that returns a named function
+  function returnsANamedFunction() {
+    return function namedFunction() {
+      console.log("I am a named function!");
+    };
+  }
+  
+  // 3️⃣ Function that returns an anonymous function
+  function returnsAnAnonymousFunction() {
+    return function() {
+      console.log("I am an anonymous function!");
+    };
+  }
+  
+  // Test logs (optional)
+  receivesAFunction(() => console.log("Callback executed!")); // "Callback executed!"
+  const namedFn = returnsANamedFunction();
+  namedFn(); // "I am a named function!"
+  
+  const anonFn = returnsAnAnonymousFunction();
+  anonFn(); // "I am an anonymous function!"
+  
